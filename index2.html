@@ -217,16 +217,28 @@
 
 
                 <li class="nav-link">
-                <li class="nav-link">
-
-                    <span class="icon-right" style="margin-left:-15px; margin-right: 5px;"><i
-                            class="fas fa-search"></i></span>
-                </li>
-
-                <li class="nav-link">
-                    <span class="icon-right user-add"><i class="fas fa-user-plus"></i></span>
-                </li>
-                </li>
+                    <li class="nav-link">
+                        <a href="index3.html"><span class="bicro">Search</span>
+    
+                            <span class="icon-right" style="margin-left:-15px; margin-right: 5px;"><i
+                                    class="fas fa-search"></i></span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="#"><span class="bicro"> Cart</span>
+                            <span class="icon-right " style="margin-left: -10px;"><i
+                                    class="       fa-solid fa-cart-shopping"></i></span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="#"><span class="bicro"> Sign In</span>
+                            <span class="icon-right user-add" style="margin-left: -10px;"><i
+                                    class="fas fa-user-plus"></i></span>
+                        </a>
+                    </li>
+                    </li>
 
             </ul>
         </nav>
@@ -726,75 +738,73 @@ Test your Creators Program game on your own Xbox console in Dev Mode. No dev kit
 
 </body>
 <!-- Implementation of some non-blocking Javascript code for mobile menu -->
-<script defer>
+<script>
     document.querySelector('.menu-btn').addEventListener('click', () => {
         document.querySelector('.menu-links').classList.toggle('show');
         document.querySelector('#menu-icon').classList.toggle('fa-times');
     });
-</script>
-<script>
+
     document.querySelectorAll('.nav-link > a').forEach(item => {
         item.addEventListener('click', function (e) {
-            e.preventDefault();
-            const dropdown = this.nextElementSibling;
-            if (dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-            } else {
-                dropdown.style.display = 'block';
+            // Check if the link has a href
+            if (this.getAttribute('href') === '#' || !this.getAttribute('href')) {
+                const dropdown = this.nextElementSibling;
+                if (dropdown) {
+                    e.preventDefault(); // Prevent navigation only if dropdown exists
+                    if (dropdown.style.display === 'block') {
+                        dropdown.style.display = 'none';
+                    } else {
+                        dropdown.style.display = 'block';
+                    }
+                }
             }
         });
     });
 
-
-
-
     // Select all nav items
     const navItems = document.querySelectorAll('.new-nav-item');
 
-    // Add click event listener to each item
     navItems.forEach(item => {
         item.addEventListener('click', function () {
-            // Close all dropdowns before opening the clicked one
             navItems.forEach(i => {
                 if (i !== this) {
                     i.classList.remove('active');
                 }
             });
 
-            // Toggle 'active' class for the clicked item
             this.classList.toggle('active');
         });
-    }); document.addEventListener('DOMContentLoaded', function () {
-        // Select all main nav items
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
         const navItems = document.querySelectorAll('.new-nav-item');
 
         navItems.forEach(navItem => {
             const dropdown = navItem.querySelector('.bold-dropdown');
 
-            // Main dropdown toggle on click
             navItem.addEventListener('click', function (event) {
-                event.preventDefault();
+                // Prevent navigation only if dropdown exists
+                if (dropdown) {
+                    event.preventDefault();
 
-                // Close all open dropdowns
-                document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => {
-                    if (dd !== dropdown) dd.classList.remove('active');
-                });
+                    // Close all open dropdowns
+                    document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => {
+                        if (dd !== dropdown) dd.classList.remove('active');
+                    });
 
-                // Toggle current dropdown
-                dropdown.classList.toggle('active');
+                    dropdown.classList.toggle('active');
+                }
             });
 
-            // Keep dropdown visible on hover
             navItem.addEventListener('mouseenter', function () {
-                dropdown.classList.add('hovering');
+                if (dropdown) dropdown.classList.add('hovering');
             });
 
             navItem.addEventListener('mouseleave', function () {
-                dropdown.classList.remove('hovering');
+                if (dropdown) dropdown.classList.remove('hovering');
             });
         });
 
-        // Nested dropdown handling
         const nestedTriggers = document.querySelectorAll('.nested-dropdown-trigger');
 
         nestedTriggers.forEach(trigger => {
@@ -803,16 +813,13 @@ Test your Creators Program game on your own Xbox console in Dev Mode. No dev kit
             trigger.addEventListener('click', function (event) {
                 event.stopPropagation();
 
-                // Close other nested dropdowns
                 trigger.closest('.bold-dropdown').querySelectorAll('.nested-dropdown').forEach(nd => {
                     if (nd !== nestedDropdown) nd.classList.remove('active');
                 });
 
-                // Toggle current nested dropdown
                 nestedDropdown.classList.toggle('active');
             });
 
-            // Keep nested dropdown visible on hover
             trigger.addEventListener('mouseenter', function () {
                 nestedDropdown.classList.add('hovering');
             });
@@ -822,56 +829,12 @@ Test your Creators Program game on your own Xbox console in Dev Mode. No dev kit
             });
         });
 
-        // Close all dropdowns on outside click
         document.addEventListener('click', function (event) {
             if (!event.target.closest('.new-nav-item')) {
                 document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => dd.classList.remove('active'));
             }
         });
     });
-
-    // Get buttons and content divs
-    const developerBtn = document.getElementById('developerBtn');
-    const programmerBtn = document.getElementById('programmerBtn');
-    const developerContent = document.getElementById('developerContent');
-    const programmerContent = document.getElementById('programmerContent');
-
-    // Show Developer content by default on page load
-    developerContent.style.display = 'block';
-    programmerContent.style.display = 'none'; // Hide Programmer content by default
-
-    // Event listener for Developer button
-    developerBtn.addEventListener('click', () => {
-        developerContent.style.display = 'block';  // Show Developer content
-        programmerContent.style.display = 'none'; // Hide Programmer content
-
-        developerBtn.classList.add('active');     // Highlight Developer button
-        programmerBtn.classList.remove('active'); // Remove highlight from Programmer button
-    });
-
-    // Event listener for Programmer button
-    programmerBtn.addEventListener('click', () => {
-        programmerContent.style.display = 'block'; // Show Programmer content
-        developerContent.style.display = 'none';   // Hide Developer content
-
-        programmerBtn.classList.add('active');    // Highlight Programmer button
-        developerBtn.classList.remove('active');  // Remove highlight from Developer button
-    });
-
-
-
-
-
-    // JavaScript for FAQ Toggle
-    document.querySelectorAll('.faq-item').forEach((item) => {
-        item.addEventListener('click', () => {
-            // Toggle active class
-            item.classList.toggle('active');
-        });
-    });
-
-
-
 </script>
 
 <script src="assets/global-shares/script/js/storepurch.js"></script>

@@ -457,24 +457,29 @@
                     </li>
                     
                     
-                    
                     <li class="nav-link">
                         <li class="nav-link">
-                        <span href="index3.html" class="bicro" style="color: #fff;">Search</span>
-    
-                            <span class="icon-right" style="margin-left:-15px; margin-right: 5px;"><i class="fas fa-search"></i></span>
+                            <a href="index3.html"><span class="bicro">Search</span>
+        
+                                <span class="icon-right" style="margin-left:-15px; margin-right: 5px;"><i
+                                        class="fas fa-search"></i></span>
+                            </a>
                         </li>
+        
                         <li class="nav-link">
-    
-                        <span href="index3.html" class="bicro" style="color: #fff;">Cart</span>
-                           <span class="icon-right"style=" margin-right: 8px;"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </li>
-                    <li class="nav-link">
-                        <span href="index2.html" class="bicro" style="color: #fff;">Sign In</span>
-                        <span class="icon-right user-add"style="margin-left: -10px; color: #fff;" ><i class="fas fa-user-plus"></i></span>
-                    </li>
-                    </li>
-    
+                            <a href="#"><span class="bicro"> Cart</span>
+                                <span class="icon-right " style="margin-left: -10px;"><i
+                                        class="       fa-solid fa-cart-shopping"></i></span>
+                            </a>
+                        </li>
+        
+                        <li class="nav-link">
+                            <a href="#"><span class="bicro"> Sign In</span>
+                                <span class="icon-right user-add" style="margin-left: -10px;"><i
+                                        class="fas fa-user-plus"></i></span>
+                            </a>
+                        </li>
+                        </li>
                 </ul>
             </nav>
         </div>
@@ -1518,105 +1523,99 @@ window.addEventListener('load', updateItemWidth);
 
 
 
-
     document.querySelectorAll('.nav-link > a').forEach(item => {
-    item.addEventListener('click', function (e) {
-        e.preventDefault();
-        const dropdown = this.nextElementSibling;
-        if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
-        } else {
-            dropdown.style.display = 'block';
-        }
-    });
-});
-
-
-
-
-// Select all nav items
-const navItems = document.querySelectorAll('.new-nav-item');
-
-// Add click event listener to each item
-navItems.forEach(item => {
-    item.addEventListener('click', function() {
-        // Close all dropdowns before opening the clicked one
-        navItems.forEach(i => {
-            if (i !== this) {
-                i.classList.remove('active');
+        item.addEventListener('click', function (e) {
+            // Check if the link has a href
+            if (this.getAttribute('href') === '#' || !this.getAttribute('href')) {
+                const dropdown = this.nextElementSibling;
+                if (dropdown) {
+                    e.preventDefault(); // Prevent navigation only if dropdown exists
+                    if (dropdown.style.display === 'block') {
+                        dropdown.style.display = 'none';
+                    } else {
+                        dropdown.style.display = 'block';
+                    }
+                }
             }
         });
-        
-        // Toggle 'active' class for the clicked item
-        this.classList.toggle('active');
     });
-});document.addEventListener('DOMContentLoaded', function () {
-    // Select all main nav items
+
+    // Select all nav items
     const navItems = document.querySelectorAll('.new-nav-item');
 
-    navItems.forEach(navItem => {
-        const dropdown = navItem.querySelector('.bold-dropdown');
-
-        // Main dropdown toggle on click
-        navItem.addEventListener('click', function (event) {
-            event.preventDefault();
-
-            // Close all open dropdowns
-            document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => {
-                if (dd !== dropdown) dd.classList.remove('active');
+    navItems.forEach(item => {
+        item.addEventListener('click', function () {
+            navItems.forEach(i => {
+                if (i !== this) {
+                    i.classList.remove('active');
+                }
             });
 
-            // Toggle current dropdown
-            dropdown.classList.toggle('active');
-        });
-
-        // Keep dropdown visible on hover
-        navItem.addEventListener('mouseenter', function () {
-            dropdown.classList.add('hovering');
-        });
-
-        navItem.addEventListener('mouseleave', function () {
-            dropdown.classList.remove('hovering');
+            this.classList.toggle('active');
         });
     });
 
-    // Nested dropdown handling
-    const nestedTriggers = document.querySelectorAll('.nested-dropdown-trigger');
+    document.addEventListener('DOMContentLoaded', function () {
+        const navItems = document.querySelectorAll('.new-nav-item');
 
-    nestedTriggers.forEach(trigger => {
-        const nestedDropdown = trigger.nextElementSibling;
+        navItems.forEach(navItem => {
+            const dropdown = navItem.querySelector('.bold-dropdown');
 
-        trigger.addEventListener('click', function (event) {
-            event.stopPropagation();
+            navItem.addEventListener('click', function (event) {
+                // Prevent navigation only if dropdown exists
+                if (dropdown) {
+                    event.preventDefault();
 
-            // Close other nested dropdowns
-            trigger.closest('.bold-dropdown').querySelectorAll('.nested-dropdown').forEach(nd => {
-                if (nd !== nestedDropdown) nd.classList.remove('active');
+                    // Close all open dropdowns
+                    document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => {
+                        if (dd !== dropdown) dd.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                }
             });
 
-            // Toggle current nested dropdown
-            nestedDropdown.classList.toggle('active');
+            navItem.addEventListener('mouseenter', function () {
+                if (dropdown) dropdown.classList.add('hovering');
+            });
+
+            navItem.addEventListener('mouseleave', function () {
+                if (dropdown) dropdown.classList.remove('hovering');
+            });
         });
 
-        // Keep nested dropdown visible on hover
-        trigger.addEventListener('mouseenter', function () {
-            nestedDropdown.classList.add('hovering');
+        const nestedTriggers = document.querySelectorAll('.nested-dropdown-trigger');
+
+        nestedTriggers.forEach(trigger => {
+            const nestedDropdown = trigger.nextElementSibling;
+
+            trigger.addEventListener('click', function (event) {
+                event.stopPropagation();
+
+                trigger.closest('.bold-dropdown').querySelectorAll('.nested-dropdown').forEach(nd => {
+                    if (nd !== nestedDropdown) nd.classList.remove('active');
+                });
+
+                nestedDropdown.classList.toggle('active');
+            });
+
+            trigger.addEventListener('mouseenter', function () {
+                nestedDropdown.classList.add('hovering');
+            });
+
+            trigger.addEventListener('mouseleave', function () {
+                nestedDropdown.classList.remove('hovering');
+            });
         });
 
-        trigger.addEventListener('mouseleave', function () {
-            nestedDropdown.classList.remove('hovering');
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.new-nav-item')) {
+                document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => dd.classList.remove('active'));
+            }
         });
     });
-
-    // Close all dropdowns on outside click
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.new-nav-item')) {
-            document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => dd.classList.remove('active'));
-        }
-    });
-});
-
 </script>
+
 
 <script src="assets/global-shares/script/js/storepurch.js"></script>
 <script src="assets/global-shares/templates/JS/page-bar-dropdown.js"></script>

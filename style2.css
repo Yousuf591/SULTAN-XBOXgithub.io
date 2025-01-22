@@ -105,6 +105,11 @@ p {
     
 
 
+    @media(max-width:1500px){
+        .bicro{
+            margin-left: -30px;
+        }
+        }
 
 
 @media(max-width:1920px){
@@ -212,7 +217,6 @@ span {
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
 }
 
 .nav-link .old-link {
@@ -1177,8 +1181,6 @@ left: 70px;
     background-color: #f2f2f2;  /* Background color change on click */
     text-decoration: underline;
     color: black;
-    text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {
@@ -1345,7 +1347,6 @@ left: 70px;
     background-color: #f2f2f2;  /* Background color change on click */
     text-decoration: underline;
     color: black;
-    text-decoration-thickness: 2px;
 }
 
 /* Hover effect with underline */
@@ -1477,7 +1478,7 @@ left: 70px;
 /* Main dropdown styling */
 .bold-dropdown {
     position: absolute;
-    display: none; /* Hidden by default */
+    display: none !important; /* Hidden by default */
     top: 100%;
     left: 0;
     background-color: white;
@@ -1489,8 +1490,8 @@ left: 70px;
 }
 
 /* Active class to show dropdown */
-.bold-dropdown.active,
-.bold-dropdown.hovering {
+.bold-dropdown.active
+{
     display: block !important; /* Show when active or hovering */
 }
 
@@ -1621,7 +1622,7 @@ left: 70px;
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
+
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {
@@ -1762,7 +1763,6 @@ left: 70px;
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {

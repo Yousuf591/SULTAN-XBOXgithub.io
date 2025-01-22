@@ -188,7 +188,6 @@ span {
   text-decoration: underline;
   color: #000 !important;
   text-decoration-thickness: 2px;
-  border: 1.5px dotted grey;
 }
 
 .nav-link .old-link {
@@ -976,7 +975,6 @@ menu-links,
   text-decoration: underline;
   color: black !important;
   text-decoration-thickness: 2px;
-  border: 1.5px dotted grey;
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {
@@ -1341,7 +1339,6 @@ menu-links,
   text-decoration: underline;
   color: black;
   text-decoration-thickness: 2px;
-  border: 1.5px dotted grey;
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {
@@ -1452,7 +1449,6 @@ menu-links,
   text-decoration: underline;
   color: black;
   text-decoration-thickness: 2px;
-  border: 1.5px dotted grey;
 }
 /* Hover effect with underline */
 .new-nav-item:hover .new-link {
@@ -2219,3 +2215,12 @@ display: flex;
         width: 100%;
     }
 }
+
+
+
+
+@media(max-width:1500px){
+  .bicro{
+      margin-left: -30px;
+  }
+  }

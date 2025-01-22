@@ -6591,3 +6591,9 @@ text-decoration:2px solid #0f7b0f underline;
 
 
 
+
+  @media(max-width:1500px){
+    .bicro{
+        margin-left: -30px;
+    }
+    }

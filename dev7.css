@@ -188,7 +188,6 @@
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
   }
   
   .nav-link .old-link {
@@ -971,7 +970,6 @@
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
   }
   /* Hover effect with underline */
   .new-nav-item:hover .new-link {
@@ -1336,7 +1334,6 @@
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
   }
   /* Hover effect with underline */
   .new-nav-item:hover .new-link {
@@ -1447,7 +1444,6 @@
     text-decoration: underline;
     color: black;
     text-decoration-thickness: 2px;
-    border: 1.5px dotted grey;
   }
   /* Hover effect with underline */
   .new-nav-item:hover .new-link {
@@ -3416,3 +3412,8 @@ background-color: #8BD80A;
         justify-content: center;
     }
     
+    @media(max-width:1500px){
+      .bicro{
+          margin-left: -30px;
+      }
+      }

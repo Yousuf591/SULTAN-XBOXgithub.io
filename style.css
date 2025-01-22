@@ -1,0 +1,1346 @@
+/******************* General styles for the main page *************************/
+/* This CSS stylesheet was entirely written by Juan Luna */
+/* ************************************************************************** */
+
+
+/* global scope variables */
+
+:root {
+    --primary-color: #107c10;
+    --btn-color: #9bf00b;
+}
+
+* {
+    box-sizing: border-box;
+    
+    /* a nice approach would be declaring a root font size of 10px (round number)
+     and work easily with rem units */
+}
+
+/* reset some default styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    color:grey;
+    line-height: 1.2;
+    font-family: "Segoe UI","SegoeUI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* utility classes */
+/* ******************************************** */
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.btn-primary {
+    background: var(--btn-color);
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    text-align: center;
+    align-items: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.img-resize {
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.link-reservar {
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+
+/* Button Styling */
+.link-reservar {
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Arial Black', sans-serif;
+
+    font-weight: bold; /* Make the text bold */
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Effect: Space Between Text and Icon */
+  .link-reservar i {
+    margin-left: 5px; /* Initial small space */
+    transition: all 0.3s ease;
+  }
+  
+  .link-reservar:hover i {
+    margin-left: 15px; /* Adds more space between text and icon */
+  }
+  
+  /* Hover Effect: Color Change */
+  .link-reservar:hover {
+    color: #9bf00b; /* Green color on hover */
+  }
+  
+  /* Underline Effect only under "GET IT NOW" */
+  .link-reservar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it directly below the text */
+    left: 12%;
+    width: 0;
+    height: 2px;
+    background-color: #9bf00b; /* Green underline color */
+    transition: all 0.3s ease;
+  }
+  
+  .link-reservar:hover::after {
+    width: 70%; /* Underline expands to the full width of the text */
+  }
+  
+@media (max-width:480px){
+    .link-reservar{
+        font-size: .5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+  .dink-reservar {
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #104a01;
+}
+
+
+
+/* Button Styling */
+.dink-reservar {
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Arial Black', sans-serif;
+
+    font-weight: bold; /* Make the text bold */
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Effect: Space Between Text and Icon */
+  .dink-reservar i {
+    margin-left: 5px; /* Initial small space */
+    transition: all 0.3s ease;
+  }
+  
+  .dink-reservar:hover i {
+    margin-left: 15px; /* Adds more space between text and icon */
+  }
+  
+  /* Hover Effect: Color Change */
+  .dink-reservar:hover {
+    color: #104a01; /* Green color on hover */
+  }
+  
+  /* Underline Effect only under "GET IT NOW" */
+  .dink-reservar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it directly below the text */
+    left: 12%;
+    width: 0;
+    height: 2px;
+    background-color: #104a01; /* Green underline color */
+    transition: all 0.3s ease;
+  }
+  
+  .dink-reservar:hover::after {
+    width: 70%; /* Underline expands to the full width of the text */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* Button Styling */
+.mink-reservar {
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Arial Black', sans-serif;
+color: #9bf00b;
+    font-weight: bold; /* Make the text bold */
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    
+  }
+  
+  /* Hover Effect: Space Between Text and Icon */
+  .mink-reservar i {
+    margin-left: 5px; /* Initial small space */
+    transition: all 0.3s ease;
+  }
+  
+  .mink-reservar:hover i {
+    margin-left: 15px; /* Adds more space between text and icon */
+  }
+  
+  /* Hover Effect: Color Change */
+  .mink-reservar:hover {
+    color: #9bf00b; /* Green color on hover */
+  }
+  
+  /* Underline Effect only under "GET IT NOW" */
+  .mink-reservar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it directly below the text */
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background-color: #9bf00b; /* Green underline color */
+    transition: all 0.3s ease;
+  }
+  
+  .mink-reservar:hover::after {
+    width: 85%; /* Underline expands to the full width of the text */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* Button Styling */
+.bink-reservar {
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Arial Black', sans-serif;
+color:black !important;
+    font-weight: bold; /* Make the text bold */
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+  }
+  
+  /* Hover Effect: Space Between Text and Icon */
+  .bink-reservar i {
+    margin-left: 5px; /* Initial small space */
+    transition: all 0.3s ease;
+  }
+  
+  .bink-reservar:hover i {
+    margin-left: 15px; /* Adds more space between text and icon */
+  }
+  
+  /* Hover Effect: Color Change */
+  .bink-reservar:hover {
+    color:black; /* Green color on hover */
+  }
+  
+  /* Underline Effect only under "GET IT NOW" */
+  .bink-reservar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it directly below the text */
+    left: 12%;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Green underline color */
+    transition: all 0.3s ease;
+  }
+  
+  .bink-reservar:hover::after {
+    width: 70%; /* Underline expands to the full width of the text */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .button-on{
+        display: inline;
+        }
+        
+        .button-1{
+            background-color: #107c10;
+            color: #fff;
+            padding: 10px 22px 10px 22px;
+            border-radius: 3%;
+            border: none;
+            font-family: Poppins;
+            font-weight: 800;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+        
+  
+        .button-2{
+            background-color: transparent;
+            color: white;
+            padding: 5px 20px 5px 22px;
+            border: none;
+            font-family: Poppins;
+            font-weight: 800;
+            font-size: 1em;
+            white-space: nowrap;
+            border-radius: 2px;
+        }
+        .button-2:hover{
+            text-decoration: underline;
+            color: white;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+        
+        button{
+            text-transform: uppercase;
+        }
+        
+        .arrow{
+            display: inline-block;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .arrow:hover{
+            transform: translateX(12px);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-dark {
+    color: #000 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* navigation menu */
+/* ******************************************** */
+
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    z-index: 2;
+    color: grey;
+    display: none;
+}
+
+
+.main-nav {
+    display: flex;
+    color: #fff;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-size: 13px;
+    margin-top: 5px;
+    background-color:transparent !important;
+    font-weight: 400;
+
+}
+
+
+.main-nav .icons-left .xbox-logo {
+    width: 150px;
+}
+
+.main-nav .icons-left .bar {
+    margin-left: 30px;
+    border-left: 3px solid #fff;
+
+}
+
+.main-nav .icons-left img {
+    width: 110px;
+    height: 23px;
+}
+
+.main-nav .menu-links {
+    display: flex;
+    flex: 3;
+}
+
+.main-nav .nav-link a, span {
+    padding: 10px 10px;
+    font-weight: 300;
+}
+
+.menu-right {
+
+    display: flex;
+
+}
+
+.menu-right .icon-right {
+    font-size: 0.85rem;
+}
+
+
+/* main content */
+/* ******************************************** */
+
+
+.showcase {
+    height: 85vh;
+    overflow: hidden;
+    width: 10%;
+    max-width: 2048px;
+    padding: 0 30px;
+    background: url("../img/david-bechkam-fifa21.jpg") no-repeat center center/cover;
+    background-color: #e6e6e6;
+}
+
+.showcase .showcase-content .img-container { 
+
+    /* this image is only displayed in smaller screens */
+
+    display: none;
+}
+
+.showcase .showcase-content {
+    
+    height: 100%;
+    /* padding: 20px; */
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    color: #000;
+    align-items: left;
+}
+
+.showcase .showcase-content .left-text {
+    padding-left: 50px;
+}
+
+
+.showcase .showcase-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.showcase .showcase-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* 
+@media(max-width:860px){
+
+ 
+
+    .main-content .showcase-content {
+        position: relative;
+        left: 188px;
+        right: 0;
+        bottom: 0;
+        top: 280px;
+        padding: 25px;
+        display: flex;
+        background-color: #0b1a2d;
+        width: 101%;
+        text-align: center;
+        justify-content: center
+    }
+
+    .main-content .showcase .showcase-content h2 {
+        font-size: 22px;
+        letter-spacing: 16px;
+        font-weight: 300
+    }
+
+    .main-content .showcase .showcase-content .link-reservar {
+        font-size: 30px;
+        letter-spacing: 24px
+    }
+
+
+
+} */
+
+
+
+/* main green icons */
+/* ******************************************** */
+
+.main-icons .main-icons-inner {
+    padding-bottom: 50%;
+    width: 80%;
+    height:auto;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    color: var(--primary-color);
+    font-size: 70%;
+    font-weight: 700;
+    align-items: center;
+    padding: 4rem;
+}
+
+.main-icons .main-icon-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-icons .main-icon-item:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-decoration-thickness: 3px;
+
+}
+
+.main-icons .main-icon-item img {
+    width: 4rem;
+    margin: 0 auto;
+}
+
+.main-icons .main-icon-item p {
+    text-align: center;
+}
+
+/* cards section */
+/* ******************************************** */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    color: #fff;
+}
+
+.cards a {
+    color: #fff;
+}
+
+.card-item-big {
+    height: 100vh;
+    margin: 3.5px;
+
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    padding: 0 20px 70px 30px;
+}
+
+.card-item-big h2 {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.card-item-big p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.big-1 {
+
+    grid-row: 1/3;
+    background-image: url("genshin.jpg");
+
+}
+
+.big-1 > div {
+   padding: 1rem 1.5rem 4rem 2rem;
+}
+
+.big-1 > img {
+    height: 100%;
+}
+
+.card-item-half {
+    display: grid;
+    margin: 2.5px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--primary-color);
+    grid-row: 1/2;
+    height: 98%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item-half h2 {
+    font-size: 1.3rem;
+    font-size:large;
+    font-weight: bolder;
+}
+
+.card-item-half p {
+    margin: 25px 0;
+    font-size: 1rem;
+    
+}
+
+.card-item-half > div {
+    padding: 2rem;
+
+}
+
+.card-item-half a {
+    margin-top: 1rem;
+}
+
+.half-1 {
+
+    grid-row: 1/2;
+
+}
+
+
+.card-img {
+    height: 100%;
+    transition: transform .3s ease;
+}
+
+.card-img:hover {
+
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
+
+.half-2 {
+
+    grid-row: 3/4;
+
+}
+
+
+.half-2 > div {
+    padding: 2rem;
+}
+
+
+.big-2 {
+    grid-row: 2/4;
+    color: #000;
+    background-image: url("pic2.jpg");
+}
+
+.big-2 > div {
+    padding: 1rem 1.5rem 4rem 2rem;
+ }
+
+.big-2 > img {
+    height: 100%;
+}
+.fifa-section {
+    height: 70vh;
+    margin: 6.5px;
+    color: #fff;
+ }
+ 
+ .fifa-section .fifa-inner {
+     height: 100%;
+     background-image: url('bg.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding-right: 70px;
+ }
+ 
+ .fifa-section .fifa-inner .fifa-content {
+     display: flex;
+     flex-direction:column;
+     line-height: 1.3;
+ }
+ 
+ .fifa-section .fifa-inner .fifa-content h2 {
+     font-size: 32px;
+ 
+ }
+ 
+ .fifa-section .fifa-inner .fifa-content strong {
+     font-size: 40px;
+     letter-spacing: 32px;
+ }
+ 
+/* cards below section */
+/* ******************************************** */
+
+
+.big-3 {
+    grid-row: 1/3;
+    background-image: url(pic10.jpg);
+}
+
+
+
+
+
+
+
+/* Button Styling */
+.offer {
+    background-color: #ffd800;
+    color: black;
+    font-weight:900;
+    padding: 0px 7px 1px;
+    margin: 0px 0px 20px;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 2px;
+}
+
+/* Hover Effect */
+.offer:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Font Size */
+@media (max-width: 768px) {
+    .offer {
+        font-size: .6rem;
+        padding:10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer {
+        font-size: 0.9rem;
+        padding:5px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Button Styling */
+.loffer {
+    background-color: #ffd800;
+    color: black;
+    font-weight:bolder;
+padding-right: 10px;
+padding-left: 10px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+
+/* Responsive Font Size */
+@media (max-width: 768px) { 
+    .loffer {
+        font-size: 1rem;
+        padding:10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loffer {
+        font-size: 0.9rem;
+        padding:5px;
+    }
+}
+
+
+
+
+
+
+
+.big-4 {
+    grid-row: 2/4;
+    background-image: url(pic11.jpg)
+}
+
+.card-item-big .big-4 > * {
+    margin-top: 1.2rem;
+}
+
+.half-3 {
+    background-color: #fff;
+    grid-row: 3/4;
+    color: #000;
+}
+
+
+
+.half-5 {
+    background-color: #fff;
+    grid-row: 1/2;
+    color: #000;
+}
+
+
+
+
+.card-item-half-3 > div {
+    padding: 2rem;
+}
+
+.follow {
+    padding: 30px;
+    color: #000;
+}
+
+.follow a {
+    font-size: 20px;
+    padding-right: 20px; 
+}
+
+
+
+@media(max-width:782){
+    .follow{
+        position: relative;
+        top:200px;
+    }
+}
+
+.footer {
+    background: #f2f2f2;
+    color: red;
+    font-size: 11px;
+    padding: 1rem 3rem;
+}
+
+.footer .footer-nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer .footer-nav ul li {
+    padding: 0.8rem 0;
+}
+
+.footer .footer-nav > div {
+    padding: 20px;
+}
+
+.footer .footer-bottom ul {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;  
+}
+
+.footer .footer-bottom ul li {
+    padding: 1rem;
+
+}
+
+
+/* MEDIA QUERIES RESPONSIVE SECTION */
+/* ******************************************** */
+
+/* It would be great to create more media queries for more different devices
+But I didn't want to spend too much time on that  */
+
+@media(max-width: 1400px) {
+
+    .menu-links #store {
+        display: none;
+    }
+
+}
+
+@media(max-width: 1107px) {
+
+    .menu-links #mi-xbox {
+        display: none;
+    }
+
+
+}
+
+
+ @media(max-width: 1024px) {
+
+    .menu-links #comunidad {
+        display: none;
+    }
+
+
+
+    .main-nav .icons-left img:first-child {
+        margin-right: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .big-1 {
+        background-position: top;
+    }
+
+    .half-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .big-3 {
+
+        background-position: top;
+        background-size: cover;
+    }
+    
+    
+    
+    .big-4 {
+        background-position: top;
+
+    }
+
+    .big-4 > div {
+        background-color: rgba(247, 246, 246, .5);
+        padding: 20px;
+    }
+
+} 
+
+
+@media(max-width: 860px) {
+
+    .menu-btn {
+        
+        display: block;
+    }
+
+    .menu-btn:hover {
+
+        opacity: 0.5;
+    }
+
+    .main-nav {
+  
+        justify-content: flex-end;
+    
+    }
+
+
+
+
+    .xbox-logo {
+        display: none;
+    }
+
+    .main-nav .icons-left .bar {
+        display: none;
+    }
+
+
+    .main-nav .menu-right li:nth-child(3) {
+        display: none;
+    }
+
+    .main-nav ul.menu-links {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        left: 0;
+        background: #f2f2f2;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-900px);
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu-links #soporte, #mi-xbox, #comunidad {
+        display: block;
+    }
+
+    .main-nav ul.menu-links li {
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+
+
+    .main-nav ul.menu-links.show {
+        transform: translateX(-20px);
+    }
+
+
+
+    .main-icons .main-icons-inner {
+        
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+        
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .card-item-big {
+        margin: 1.5px;
+        padding: 10px 5px 30px 20px;
+        text-align: center;
+    }
+    
+    .card-item-big h2 {
+        font-size: 30px;
+        font-weight: 800;
+    }
+    
+    .card-item-big p {
+        display: none;
+    }
+
+    .card-item-half {
+        margin: 1.5px;
+
+        height: 50vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-item-half div {
+        margin-left: 10px;
+    }
+    
+    .card-item-half h2 {
+        font-size: 1rem;
+    }
+    
+    .card-item-half p {
+        margin: 15px 0;
+        font-size: 1rem;
+
+    }
+
+
+    .half-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+    .half-2 > div {
+        padding: 0.5rem;
+    }
+
+    .big-4 > div {
+        background-color: unset;
+    }
+
+
+    .fifa-section .fifa-inner {
+        
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .fifa-section .fifa-inner .fifa-content {
+        position: absolute;
+        
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 50%;
+        padding: 25px;
+        display: block;
+        background-color: rgb(51, 51, 51);
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .fifa-section .fifa-inner .fifa-content h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+
+    .fifa-section .fifa-inner .fifa-content strong {
+        font-size: 30px;
+        letter-spacing: 24px;
+    }
+
+    .footer .footer-nav {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:860px){
+    
+     .fifa-inner {
+        background-image: url(diablo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+/* General Styles */
+.showcase {
+    overflow: hidden;
+    background: url('xboxvideo.mp4') center center / cover no-repeat;
+}
+
+.showcase-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    padding-bottom: 5%;
+}
+
+.showcase-content {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    z-index: 1;
+    width: 80%;
+}
+
+.h1-heading {
+    font-size: 300%;
+    margin-bottom: 1rem;
+}
+
+.h2-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #104a01;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Media Queries */
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .h1-heading {
+        font-size: 1rem;
+    }
+    .h2-heading {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .h1-heading {
+        font-size: 1.5rem;
+    }
+    .h2-heading {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .icon{
+        padding-left: 50%;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+    .icon{
+        padding-left: 50%;
+    }
+}

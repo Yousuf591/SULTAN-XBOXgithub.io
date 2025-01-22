@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 120" style="enable-background:new 0 0 400 120;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E6E6E6;}
+</style>
+<title>Artboard 1</title>
+<g id="background">
+	<rect y="0" class="st0" width="400" height="120"/>
+</g>
+<g id="squares">
+	<rect x="275" y="32.5" width="12.5" height="12.5"/>
+	<path d="M265,22.5V55h32.5V22.5H265z M292.5,50H270V27.5h22.5V50z"/>
+	<rect x="275" y="32.5" width="12.5" height="12.5"/>
+	<rect x="275" y="32.5" width="12.5" height="12.5"/>
+	<rect x="317.5" y="32.5" width="12.5" height="12.5"/>
+	<path d="M307.5,22.5V55H340V22.5H307.5z M335,50h-22.5V27.5H335V50z"/>
+	<rect x="317.5" y="32.5" width="12.5" height="12.5"/>
+	<rect x="317.5" y="32.5" width="12.5" height="12.5"/>
+	<rect x="275" y="75" width="12.5" height="12.5"/>
+	<path d="M265,65v32.5h32.5V65H265z M292.5,92.5H270V70h22.5V92.5z"/>
+	<rect x="275" y="75" width="12.5" height="12.5"/>
+	<rect x="275" y="75" width="12.5" height="12.5"/>
+	<polygon points="320,65 320,70.4 312.5,70.4 312.5,75.8 307.5,75.8 307.5,65 	"/>
+	<rect x="325" y="65" width="5" height="5.4"/>
+	<polygon points="340,65 340,75.8 335,75.8 335,81.2 330,81.2 330,70.4 335,70.4 335,65 	"/>
+	<rect x="325" y="81.2" width="5" height="5.4"/>
+	<rect x="307.5" y="81.2" width="5" height="5.4"/>
+	<polygon points="325,70.4 325,81.2 312.5,81.2 312.5,75.8 320,75.8 320,70.4 	"/>
+	<polygon points="325,86.7 325,92.1 320,92.1 320,97.5 307.5,97.5 307.5,92.1 312.5,92.1 312.5,86.7 	"/>
+	<rect x="325" y="92.1" width="10" height="5.4"/>
+	<rect x="335" y="81.2" width="5" height="10.8"/>
+</g>
+</svg>

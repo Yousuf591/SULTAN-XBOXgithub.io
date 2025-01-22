@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Sitio oficial de Xbox España">
+    <link rel="icon" type="image/png" href="PV-removebg-preview.png" />
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <title>PV | XBOX</title>
+
+
+
+
+<link rel="stylesheet" href="style3.css">
+<link rel="stylesheet" href="style4.css">
+
+</head>
+
+    <style>
+        .new-releases-section {
+            padding: 20px;
+            max-width: 1900px;
+            margin: 0 auto;
+        }
+
+        .new-releases-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .new-releases-title {
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .shop-all-link {
+            color: #107c10;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .shop-all-link::after {
+            content: "\00A0>";
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #E6E6E6 !important;
+            padding-bottom: 0%;
+            margin-top: -50px;
+        }
+
+        .car-head {
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 2%;
+        }
+
+        .rishta {
+            font-size: 20px;
+            padding-bottom: 2%;
+
+        }
+
+        .raahon {
+            background-color: gold;
+            border: none;
+        }
+
+        .carousel-container {
+            width: 90%;
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s ease-in-out;
+            overflow-x: hidden;
+            /* Allow horizontal scrolling */
+            scroll-behavior: smooth;
+            /* Smooth scrolling behavior */
+            margin: 10px 0px;
+        }
+
+        .carousel-item {
+            position: relative;
+            flex: 0 0 20%;
+            /* Each item occupies 20% of the container width */
+            background-color: #1e1e1e;
+            overflow: hidden;
+            justify-content: center;
+            align-content: end;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item-content {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-item-content h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .carousel-item-content p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 70%;
+
+            transform: translateY(-50%);
+            background-color: rgba(255, 252, 252, 0.5);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            z-index: 999;
+        }
+
+
+
+        @media(max-width:580px) {
+
+            .button {
+                width: 50px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.9rem;
+                z-index: 999;
+            }
+
+
+
+            .button.left {
+                left: 0px !important;
+            }
+
+            .button.right {
+                right: 0px !important;
+            }
+
+        }
+
+        .button.left {
+            left: 60px;
+        }
+
+        .button.right {
+            right: 65px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel-item {
+                flex: 0 0 60%;
+            }
+        }
+
+
+
+        .carousel-wrapper2 {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #FFFFFF !important;
+            padding-bottom: 0%;
+        }
+
+        .car-head2 {
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 2%;
+        }
+
+        .rishta2 {
+            font-size: 20px;
+            padding-bottom: 2%;
+
+        }
+
+        .raahon2 {
+            background-color: gold;
+            border: none;
+        }
+
+        .carousel-container2 {
+            width: 90%;
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s ease-in-out;
+            overflow-x: hidden;
+            /* Allow horizontal scrolling */
+            scroll-behavior: smooth;
+            /* Smooth scrolling behavior */
+            margin: 10px 0px;
+        }
+
+        .carousel-item2 {
+            position: relative;
+            flex: 0 0 20%;
+            /* Each item occupies 20% of the container width */
+            background-color: #1e1e1e;
+            overflow: hidden;
+            justify-content: center;
+            align-content: end;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .carousel-item2 img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item-content2 {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-item-content2 h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .carousel-item-content2 p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .button2 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+            background-color: rgba(255, 252, 252, 0.5);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            z-index: 999;
+        }
+
+
+
+        @media(max-width:580px) {
+
+            .button2 {
+                width: 50px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.9rem;
+                z-index: 999;
+            }
+
+
+
+            .button.left2 {
+                left: 0px !important;
+            }
+
+            .button.right2 {
+                right: 0px !important;
+            }
+
+        }
+
+        .button.left2 {
+            left: 60px;
+        }
+
+        .button.right2 {
+            right: 65px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item2 {
+                flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel-item2 {
+                flex: 0 0 60%;
+            }
+        }
+
+        .game-pass {
+            padding: 50px;
+        }
+
+        .game-pass h1 {
+            font-size: 60px;
+            color: #008000;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .game-pass .underline {
+            width: 60px;
+            height: 15px;
+            background-color: #a4d200;
+            margin: 15px auto 30px;
+            transform: skewX(-35deg);
+
+        }
+
+        .game-pass p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+
+        .game-pass a {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #008000;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .game-pass a:hover {
+            text-decoration: underline;
+        }
+
+        .game-pass .game-buttons {
+            margin-top: 40px;
+        }
+
+        .game-pass .game-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: black;
+
+            cursor: pointer;
+        }
+
+        .game-pass .game-buttons button:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .game-pass .game-buttons .active {
+    color: black;
+}
+
+
+        .carousel-wrapper3 {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background-color: #FFFFFF !important;
+            padding-bottom: 0%;
+        }
+
+        .car-head3 {
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 2%;
+        }
+
+        .rishta3 {
+            font-size: 20px;
+            padding-bottom: 2%;
+
+        }
+
+        .raahon3 {
+            background-color: gold;
+            border: none;
+        }
+
+        .carousel-container3 {
+            width: 90%;
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s ease-in-out;
+            overflow-x: hidden;
+            /* Allow horizontal scrolling */
+            scroll-behavior: smooth;
+            /* Smooth scrolling behavior */
+            margin: 10px 0px;
+        }
+
+        .carousel-item3 {
+            position: relative;
+            flex: 0 0 20%;
+            /* Each item occupies 20% of the container width */
+            background-color: #1e1e1e;
+            overflow: hidden;
+            justify-content: center;
+            align-content: end;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .carousel-item3 img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item-content3 {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-item-content3 h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .carousel-item-content3 p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .button3 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 70%;
+
+            transform: translateY(-50%);
+            background-color: rgba(255, 252, 252, 0.5);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            z-index: 999;
+        }
+
+
+
+        @media(max-width:580px) {
+
+            .button3 {
+                width: 50px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.9rem;
+                z-index: 999;
+            }
+
+
+
+            .button.left3 {
+                left: 0px !important;
+            }
+
+            .button.right3 {
+                right: 0px !important;
+            }
+
+        }
+
+        .button.left3 {
+            left: 60px;
+        }
+
+        .button.right3 {
+            right: 65px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item3 {
+                flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel-item3 {
+                flex: 0 0 60%;
+            }
+        }
+
+        /* start 4 carousel */
+
+        .carousel-wrapper4 {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #FFFFFF !important;
+            padding-bottom: 0%;
+        }
+
+        .car-head4 {
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 2%;
+        }
+
+        .rishta4 {
+            font-size: 20px;
+            padding-bottom: 2%;
+
+        }
+
+        .raahon4 {
+            background-color: gold;
+            border: none;
+        }
+
+        .carousel-container4 {
+            width: 90%;
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s ease-in-out;
+            overflow-x: hidden;
+            /* Allow horizontal scrolling */
+            scroll-behavior: smooth;
+            /* Smooth scrolling behavior */
+            margin: 10px 0px;
+        }
+
+        .carousel-item4 {
+            position: relative;
+            flex: 0 0 20%;
+            /* Each item occupies 20% of the container width */
+            background-color: #1e1e1e;
+            overflow: hidden;
+            justify-content: center;
+            align-content: end;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .carousel-item4 img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item-content4 {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-item-content4 h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .carousel-item-content4 p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .button4 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+            background-color: rgba(255, 252, 252, 0.5);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            z-index: 999;
+        }
+
+
+
+        @media(max-width:580px) {
+
+            .button4 {
+                width: 50px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.9rem;
+                z-index: 999;
+            }
+
+
+
+            .button.left4 {
+                left: 0px !important;
+            }
+
+            .button.right4 {
+                right: 0px !important;
+            }
+
+        }
+
+        .button.left4 {
+            left: 60px;
+        }
+
+        .button.right4 {
+            right: 65px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item4  {
+                flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel-item4 {
+                flex: 0 0 60%;
+            }
+        }
+
+
+        .carousel-wrapper5 {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #FFFFFF !important;
+            padding-bottom: 0%;
+        }
+
+        .car-head5 {
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 2%;
+        }
+
+        .rishta5 {
+            font-size: 20px;
+            padding-bottom: 2%;
+
+        }
+
+        .raahon5 {
+            background-color: gold;
+            border: none;
+        }
+
+        .carousel-container5 {
+            width: 90%;
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s ease-in-out;
+            overflow-x: hidden;
+            /* Allow horizontal scrolling */
+            scroll-behavior: smooth;
+            /* Smooth scrolling behavior */
+            margin: 10px 0px;
+        }
+
+        .carousel-item5 {
+            position: relative;
+            flex: 0 0 20%;
+            /* Each item occupies 20% of the container width */
+            background-color: #1e1e1e;
+            overflow: hidden;
+            justify-content: center;
+            align-content: end;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .carousel-item5 img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item-content5 {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-item-content5 h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .carousel-item-content5 p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .button5 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+            background-color: rgba(255, 252, 252, 0.5);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            z-index: 999;
+        }
+
+
+
+        @media(max-width:580px) {
+
+            .button5 {
+                width: 50px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.9rem;
+                z-index: 999;
+            }
+
+
+
+            .button.left5 {
+                left: 0px !important;
+            }
+
+            .button.right5 {
+                right: 0px !important;
+            }
+
+        }
+
+        .button.left5 {
+            left: 60px;
+        }
+
+        .button.right5 {
+            right: 65px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item5  {
+                flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel-item5 {
+                flex: 0 0 60%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+  
+
+
+ 
+    <div class="container-fluid">
+
+        <nav class="main-nav">
+            <div class="icons-left">
+                <a href=""><img src="ms.png" class="microsoft-icon"
+                        alt="microsoft-icon"></a>
+                <a href="index.html"><img src="logo.png" class="xbox-logo " alt="xbox-logo"></a>
+                <span class="icon-right"><i class="fas fa-search fa-2x search"></i></span>
+            </div>
+
+
+            <ul class="menu-links">
+                <li class="new-nav-item ">
+                    <a href="#" class="new-link " style="font-weight: normal;"id="bell" >Games Pass<i class="fas fa-chevron-down"
+                            style="font-size: 70%;"></i></a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                    <li><a href="index10.html">Join Game Pass</a></li>
+                                    <li><a href="#">Browse Games</a></li>
+                                    <li><a href="#">Games Pass Ultimate</a></li>
+                                    <li><a href="#">Pc Game Pass</a></li>
+                                    <li><a href="#">Game Pass Core</a></li>
+                                    <li><a href="#">Deals With Game Pass</a></li>
+                                    <li><a href="#">Xbox Cloud Gaming (Beta)</a></li>
+
+
+
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </ul>
+
+                </li>
+                <li class="new-nav-item ">
+                    <a href="#" class="new-link " style="font-weight: normal;" id="bell">Games<i class="fas fa-chevron-down"
+                            style="font-size: 70%;"></i></a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                    <li><a href="#">Games Home</a></li>
+                                    <li><a href="#">Shop all Console Games</a></li>
+                                    <li><a href="#">Shop all Pc Games</a></li>
+                                    <li><a href="#">Cloud Games</a></li>
+                                    <li><a href="#">Free-To-Play games</a></li>
+                                    <li><a href="#">Optimised Games</a></li>
+                                    <li><a href="#">Backward compatible Games</a></li>
+                                    <li><a href="#">Sales & Specials</a></li>
+                                    <li><a href="#">Redeem Code</a></li>
+
+
+
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </ul>
+
+                </li>
+                <li class="new-nav-item ">
+                    <a href="#" class="new-link " style="font-weight: normal;" id="bell">Devices<i class="fas fa-chevron-down"
+                            style="font-size: 70%;"></i></a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="brid-container">
+                            <div class="grid-item">
+                                <h3>Software</h3>
+                                <ul>
+                                    <li><a href="#">Windows Apps</a></li>
+                                    <li><a href="#">AI</a></li>
+                                    <li><a href="#">OneDrive</a></li>
+                                    <li><a href="#">Outlook</a></li>
+                                    <li><a href="#">Skype</a></li>
+                                    <li><a href="#">OneNote</a></li>
+                                    <li><a href="#">Microsoft Teams</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="grid-item">
+                                <h3>Developer & IT</h3>
+                                <ul>
+                                    <li><a href="#">Developer Center</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Microsoft Learn</a></li>
+                                    <li><a href="#">Microsoft Tech Community</a></li>
+                                    <li><a href="#">Azure Marketplace</a></li>
+                                    <li><a href="#">AppSource</a></li>
+                                    <li><a href="#">Visual Studio</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </ul>
+
+                </li>
+
+           
+                <li class="new-nav-item" id="store">
+                    <a href="#" class="new-link " style="font-weight: normal;"
+                        onclick="toggleDropdown(event, 'bold-dropdown')">
+                        Store <i class="fas fa-chevron-down" style="font-size: 70%;"></i>
+                    </a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                    <li><a href="#" style="font-weight: normal;">Shop Game  </a></li>
+                                    <li><a href="#" style="font-weight: normal;">Shop Game Pass</a></li>
+                                   
+                                    <li><a href="#">Shop Consoles</a></li>
+                                    <li><a href="#">Shop Deals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li class="nav-link" id="more">
+                    <a href="#" class="old-link" style="font-weight: normal;">More <i class="fas fa-chevron-down"
+                            style="font-size: 70%;"></i></a>
+                    <ul class="dropdown">
+                       
+                        <li>
+                            <a href="#" style="font-weight: normal;">Store <i class="fas fa-chevron-right"
+                                    style="font-size: 70%;"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="#" style="font-weight: normal;">Shop Games</a></li>
+                                <li><a href="#" style="font-weight: normal;">Shop Games Pass</a></li>
+                                <li><a href="#" style="font-weight: normal;">Shop Console</a></li>
+                                <li><a href="#" style="font-weight: normal;">Shop Accessories</a></li>
+                                <li><a href="#" style="font-weight: normal;">Shop Deals</a></li>
+
+                            </ul>
+                        </li>
+
+                      
+                        <li>
+                            <a href="#" style="font-weight: normal;">Support <i class="fas fa-chevron-right"
+                                    style="font-size: 70%;"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="#" style="font-weight: normal;">Support Home </a></li>
+                                <li><a href="#" style="font-weight: normal;">Xbox Status</a></li>
+                                <li>
+                                    <a href="#" style="font-weight: normal;">Help Topics <i class="fas fa-chevron-right"
+                                            style="font-size: 70%;"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#" style="font-weight: normal;"> Account Profile</a></li>
+                                        <li><a href="#" style="font-weight: normal;">Subscriptions & Billing</a></li>
+                                        <li><a href="#" style="font-weight: normal;">Hardware & Networking</a></li>
+                                        <li><a href="#" style="font-weight: normal;">Family & Online Safety</a></li>
+                                        <li><a href="#" style="font-weight: normal;">Games & Apps</a></li>
+                                        <li><a href="#" style="font-weight: normal;">Freinds & Social Activity</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#" style="font-weight: normal;">Accesssible Gaming</a></li>
+                                <li><a href="#" style="font-weight: normal;">Xbox System Updates </a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" style="font-weight: normal;">My Xbox <i class="fas fa-chevron-right"
+                                    style="font-size: 70%;"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="#" style="font-weight: normal;">Profile</a></li>
+                                <li><a href="#" style="font-weight: normal;">Rewards</a></li>
+                                <li><a href="#" style="font-weight: normal;">Wishlist</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" style="font-weight: normal;">Developers <i class="fas fa-chevron-right"
+                                    style="font-size: 70%;"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="#" style="font-weight: normal;">Games</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+                <li class="new-nav-item" id="store">
+                    <a href="#" class="new-link " style="font-weight: normal;"
+                        onclick="toggleDropdown(event, 'bold-dropdown')">
+                        Support <i class="fas fa-chevron-down" style="font-size: 70%;"></i>
+                    </a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                    <li><a href="#" style="font-weight: normal;">Support Home </a></li>
+                                    <li><a href="#" style="font-weight: normal;">Xbox Status</a></li>
+                                    <li>
+                                        <a href="#" class="nested-dropdown-trigger"
+                                            onclick="toggleDropdown(event, 'nested-dropdown')">
+                                            Help Topics <i class="fas fa-chevron-right"
+                                                style="font-size: 70%; margin-left: 60%;"></i>
+                                        </a>
+                                        <!-- Nested dropdown -->
+                                        <ul class="nested-dropdown">
+                                            <li><a href="#">Account & Profile</a></li>
+                                            <li><a href="#">Subscriptions & Billing</a></li>
+                                            <li><a href="#">Hardware & Networking</a></li>
+                                            <li><a href="#">Family & Online Safety</a></li>
+                                            <li><a href="#">Games & Apps</a></li>
+                                            <li><a href="#">Friends & Social Activity</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Accessible Gaming</a></li>
+                                    <li><a href="#">Xbox System Updates</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+
+                <li class="new-nav-item" id="store">
+                    <a href="#" class="new-link " style="font-weight: normal;"
+                        onclick="toggleDropdown(event, 'bold-dropdown')">
+                        My Xbox <i class="fas fa-chevron-down" style="font-size: 70%;"></i>
+                    </a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                    <li><a href="#" style="font-weight: normal;">Profile  </a></li>
+                                    <li><a href="#" style="font-weight: normal;">Rewards</a></li>
+                                   
+                                    <li><a href="#">Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="new-nav-item" id="store">
+                    <a href="#" class="new-link " style="font-weight: normal;"
+                        onclick="toggleDropdown(event, 'bold-dropdown')">
+                        Store <i class="fas fa-chevron-down" style="font-size: 70%;"></i>
+                    </a>
+                    <ul class="bold-dropdown mega-menu">
+                        <div class="crid-container">
+                            <div class="grid-item">
+                                <ul>
+                                   
+                                    <li><a href="#">Games</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+
+            <ul class="menu-right ">
+                <li class="new-nav-item ">
+                    <a href="#" class="new-link micro" style="font-weight: normal;">All Microsoft<i
+                            class="fas fa-chevron-down" style="font-size: 70%;"></i></a>
+                    <ul class="new-dropdown mega-menu">
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <h3>Software</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Windows Apps</a></li>
+                                    <li><a href="#">AI</a></li>
+                                    <li><a href="#">OneDrive</a></li>
+                                    <li><a href="#">Outlook</a></li>
+                                    <li><a href="#">Skype</a></li>
+                                    <li><a href="#">OneNote</a></li>
+                                    <li><a href="#">Microsoft Teams</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid-item">
+                                <h3>PCs & Devices</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Computers</a></li>
+                                    <li><a href="#">Shop Xbox</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                    <li><a href="#">VR & mixed reality</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid-item">
+                                <h3>Entertainment</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Xbox Game Pass Ultimate</a></li>
+                                    <li><a href="#">Xbox games</a></li>
+                                    <li><a href="#">PC games</a></li>
+                                    <li><a href="#">Windows digital games</a></li>
+                                    <li><a href="#">Movies & TV</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid-item">
+                                <h3>Business</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Microsoft Cloud</a></li>
+                                    <li><a href="#">Microsoft Security</a></li>
+                                    <li><a href="#">Azure</a></li>
+                                    <li><a href="#">Dynamics 365</a></li>
+                                    <li><a href="#">Microsoft 365 for business</a></li>
+                                    <li><a href="#">Microsoft Industry</a></li>
+                                    <li><a href="#">Microsoft Power Platform</a></li>
+                                    <li><a href="#">Windows 365</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid-item">
+                                <h3>Developer & IT</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Developer Center</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Microsoft Learn</a></li>
+                                    <li><a href="#">Microsoft Tech Community</a></li>
+                                    <li><a href="#">Azure Marketplace</a></li>
+                                    <li><a href="#">AppSource</a></li>
+                                    <li><a href="#">Visual Studio</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid-item">
+                                <h3>Other</h3>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Microsoft Rewards</a></li>
+                                    <li><a href="#">Free downloads & security</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Virtual workshops and training</a></li>
+                                    <li><a href="#">Gift cards</a></li>
+                                    <li><a href="#">Licensing</a></li>
+                                    <li><a href="#">Microsoft Experience Centre</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <center>
+                            <p class="site" style="">VIEW SITEMAP <i class="fas fa-chevron-right"
+                                    style="padding-left: 1%;"></i></p>
+                        </center>
+
+                    </ul>
+
+                </li>
+
+
+
+                <li class="nav-link">
+                <li class="nav-link">
+                    <a href="#" class="bicro">Search</a>
+
+                    <span class="icon-right" style="margin-left:-15px; margin-right: 5px;"><i
+                            class="fas fa-search"></i></span>
+                </li>
+                <li class="nav-link">
+
+                    <a href="#" class="bicro">Cart</a>
+                    <span class="icon-right" style=" margin-right: 8px;"><i
+                            class="fa-solid fa-cart-shopping"></i></span>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="bicro">Sign In</a>
+                    <span class="icon-right user-add" style="margin-left: -10px;"><i
+                            class="fas fa-user-plus"></i></span>
+                </li>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+
+
+    
+
+
+    <div class="slider-container">
+
+        <div class="bannerpage" id="slider">
+            <div class="bannerbox bannerbox-for-games-home">
+                <div class="text-container1">
+                    <!-- <div class="loffer">
+                        NOW AVAILIBLE
+                    </div> -->
+                    <h2 class="text-2">Fortnite</h2>
+                    <a href="#" target="_blank" class="button-1 link-reservar" style="color: #003300; font-family: 'Arial Black', sans-serif;margin-bottom: 20px;">GET IT NOW <i class="fas fa-chevron-right"></i></a>
+                    <h3 class="text-3">Play Fortnite OG Fortnite Ballistic, and LEGO® Fortnite Brick Life</h3>
+                    <br><br>
+                    <div class="button-on">
+                       
+                      
+                    </div>
+                      
+                    </div>
+            </div>
+            <div class="bannerbox2   bannerbox2-for-games-home">
+                <div class="text-container1">
+                    <!-- <div class="loffer">
+                        NOW AVAILIBLE
+                    </div> -->
+                    <p class="shape4">NOW AVAILIBLE
+    
+    
+    
+                    </p>
+                    <h2 class="text-2">Crash™ Team Racing Nitro-Fueled</h2>
+                    <h3 class="text-3">Power slide to glory in additional karts and tracks with Game Pass</h3>
+                    <br><br>
+                    <div class="button-on">
+                        <a href="#" target="_blank" class="button-1 link-reservar" style="color: #003300; font-family: 'Arial Black', sans-serif;font-size: small;">GET IT NOW <i class="fas fa-chevron-right"></i></a>
+                     
+                    </div>
+                      
+                    </div>
+                </div>
+
+            <div class="bannerbox3  bannerbox3-for-games-home ">
+                <div class="text-container1">
+                    <!-- <div class="loffer">
+                        NOW AVAILIBLE
+                    </div> -->
+                    <p class="shape4" style="width: 190px;">PLAY DAY ONE WITH GAME PASS
+    
+    
+    
+                    </p>
+                    <h2 class="text-2">Atomfall</h2>
+                    <h3 class="text-3">Search, scavenge and fight to survive in the quarantine zone.</h3>
+                    <br><br>
+                    <div class="button-on">
+                        <a href="#" target="_blank" class="button-1 link-reservar" style="font-size: large;color: #003300; font-family: 'Arial Black', sans-serif;font-size: small;">PRE-ORDER NOW <i class="fas fa-chevron-right"></i></a>
+                    
+                    </div>
+                      
+                    </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="slider-nav">
+            <button class="prev" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next" id="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="pagination-container">
+            <div id="pagination" class="slider-pagination"></div>
+        </div>
+
+    </div>
+
+    <div class="icons-container">
+
+        <div class="icon-1">
+            <img class="icon-parent" src="a2d252f5-ec7c-4765-bcc0-edd1c8e922a4.svg" height="80px" width="100%"
+                alt="">
+            <div class="icon-text">
+                SHOP DEALS</div>
+        </div>
+        <div class="icon-1">
+            <img class="icon-parent" src="9bde9a88-f063-4e9b-b247-8386cf809701.svg" height="80px" width="100%"
+                alt="">
+            <div class="icon-text">
+                REDEEM CODE</div>
+        </div>
+        <div class="icon-1">
+            <img class="icon-parent" src="271474f2-e39b-4f35-8abc-371897636e46.svg" height="80px" width="100%"
+                alt="">
+            <div class="icon-text">
+                WISH LIST</div>
+        </div>
+
+    </div>
+    <div class="explore-section">
+        <h1 class="explore-title">Explore Xbox games</h1>
+        <a href="#" class="browse-button"> <div class="xbox-nav-label">ALL GAMES  <i
+            class="fas fa-chevron-right"></i></div></a>
+    </div>
+
+
+
+  
+
+   
+
+    <div class="carousel-wrapper4  carousel-wrapper-for-game-pass-ultimate-banner4"
+    style="background-color: #FFFFFF !important; ">
+
+    <div class="hamnawa">
+        <center>
+            <div class="unstopable">
+                <h2 class="shape3">Last Chance Sale</h2>
+                <p class="shape4">Save up to 60%
+
+
+
+                </p>
+            </div>
+
+            <div class="zamana">
+
+                <a href="#" target="_blank" class="mink-reservar you">LEARN MORE <i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </center>
+
+    </div>
+    <button class="button left4" onclick="scrollCarousel4(-1)">&#10094;</button>
+    <center>
+        <div class="carousel-container4" id="carousel4">
+
+
+
+            <div class="carousel-item4">
+                <img src="muthi (1).jpeg"
+                    alt="Overthrown">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Overthrown (Game Preview)</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item4">
+                <img src="muthi (1).png"
+                    alt="EA Sports WRC">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>EA SPORTS™ WRC</h3>
+                    <p>Racing & Flying</p>
+                </div>
+            </div>
+            <div class="carousel-item4">
+                <img src="muthi (10).jpeg"
+                    alt="Crash Nitro Fueled">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Crash™ Team Racing Nitro-Fueled</h3>
+                    <p>Racing & Flying</p>
+                </div>
+            </div>
+        
+
+
+
+            <div class="carousel-item4">
+                <img src="muthi (16).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item4">
+                <img src="muthi (17).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item4">
+                <img src="muthi (4).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+            <div class="carousel-item4">
+                <img src="muthi (5).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+            <div class="carousel-item4">
+                <img src="muthi (6).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+        </div>
+    </center>
+    <button class="button right4" onclick="scrollCarousel4(1)">&#10095;</button>
+</div>
+
+
+    <div class="carousel-wrapper2  carousel-wrapper-for-game-pass-ultimate-banner2"
+        style="background-color: transparent ;">
+
+        <div class="hamnawa">
+            <center>
+                <div class="unstopable">
+                    <h2 class="shape3">Last Chance Sale</h2>
+                    <p class="shape4">Save up to 60%
+    
+    
+    
+                    </p>
+                </div>
+    
+                <div class="zamana">
+    
+                    <a href="#" target="_blank" class="mink-reservar you">LEARN MORE <i
+                            class="fas fa-chevron-right"></i></a>
+                </div>
+    
+            </center>
+    
+        </div>
+
+        <button class="button left2" onclick="scrollCarousel2(-1)">&#10094;</button>
+        <center>
+            <div class="carousel-container2" id="carousel2">
+
+
+
+                <div class="carousel-item2">
+                    <img src="masoom (18).jpeg"
+                        alt="Overthrown">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Overthrown (Game Preview)</h3>
+                        <p>Action & Adventure</p>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item2">
+                    <img src="masoom (19).jpeg"
+                        alt="EA Sports WRC">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>EA SPORTS™ WRC</h3>
+                        <p>Racing & Flying</p>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <img src="masoom (2).jpeg"
+                        alt="Crash Nitro Fueled">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Crash™ Team Racing Nitro-Fueled</h3>
+                        <p>Racing & Flying</p>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <img src="masoom (20).jpeg"
+                        alt="Aliens Dark Descent">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Aliens: Dark Descent</h3>
+                        <p>Strategy</p>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <img src="masoom (21).jpeg"
+                        alt="Nine Sols">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Nine Sols</h3>
+                        <p>Action & Adventure</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item2">
+                    <img src="masoom (3).jpeg"
+                        alt="Nine Sols">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Nine Sols</h3>
+                        <p>Action & Adventure</p>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item2">
+                    <img src="masoom (4).jpeg"
+                        alt="Nine Sols">
+                    <div class="carousel-item-content2">
+                        <button class="raahon2">50% OFF</button>
+
+                        <h3>Nine Sols</h3>
+                        <p>Action & Adventure</p>
+                    </div>
+                </div>
+
+
+
+
+            
+
+
+
+            </div>
+        </center>
+        <button class="button right2" onclick="scrollCarousel2(1)">&#10095;</button>
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card-item-big big-1">
+            <div>
+                <div class="koffer">
+                    NOW AVAILIBLE 
+                </div>
+                <h2 class="mb-4">Path of Exile 2</h2>
+                <p>Experience breathtaking tactical battles in this action-packed demo.</p>
+                <a href="#"
+                    target="_blank" class="link-reservar" ````````````````````````````````````````````````````  ````````````````````````>GET IT NOW <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="card-item-half half-1">
+            <div>
+                <div class="koffer">
+                    NEW SEASON
+                </div>
+                <h2>The First Descendant</h2>
+                <p>Claim your desired Descendant for free in the new season Void Chaser.</p>
+                <a href="#" class="link-reservar">Join Now<i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <img src="pyaas (5).jpg" alt="game-pass-img" class="card-img img-resize">
+        </div>
+
+
+        <div class="card-item-half half-2">
+            <img src="pyaas (4).jpg" alt="call-of-sea-img" class="card-img img-resize">
+            <div>
+                <div class="koffer">
+                    NOW AVAILIBLE 
+                </div>
+                <h2>Farming Simulator 25</h2>
+                <p>Cultivate 25 crops, use over 400 machines and build your farming empire.
+                </p>
+                <a href="" class="link-reservar">GET IT NOW <i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="card-item-big big-2">
+            <div>
+                <div class="koffer">
+                    NOW AVAILIBLE 
+                </div>
+                <h2>The Thing: Remastered</h2>
+                <p>Cultivate 25 crops, use over 400 machines and build your farming empire.
+                </p>
+                <a href="#"
+                target="_blank" class="link-reservar">SHOP NOW <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <section class="genre-section">
+        <h1 class="section-title">Shop games by genre</h1>
+        <div class="genre-grid">
+            <!-- Genre Cards -->
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="23eaa904-0d5d-410c-b358-b4189ecf3f55.svg" alt="Action & Adventure Icon">
+                </div>
+                <div class="xbox-nav-label">Action & Adventure  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="81a58a44-912f-4aa9-b0cf-ea028c865e2c.svg" alt="Platformers Icon">
+                </div>
+                <div class="xbox-nav-label">Platformers  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="b4e44ebb-2ca6-43bb-b8d8-86940b9e974f.svg" alt="Kids & Family Icon">
+                </div>
+                <div class="xbox-nav-label">Kids & Family   <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="0f77b1aa-92b7-4829-b946-55271f4b31ec.svg" alt="Racing & Flying Icon">
+                </div>
+                <div class="xbox-nav-label">PlatfoRacing & Flyingrmers  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="3fce84b2-c078-4cb0-8c05-ebd4b7cf55a4.svg" alt="Roleplaying Icon">
+                </div>
+                <div class="xbox-nav-label">Roleplaying  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="381ceff9-3184-4c4c-8f59-95cb72aed3aa.svg" alt="Shooters Icon">
+                </div>
+                <div class="xbox-nav-label">Shooters  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="619fc5fa-5b2d-4b16-aaed-ce058d28f5c1.svg" alt="Sports Icon">
+                </div>
+                <div class="xbox-nav-label">Sports  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="genre-card">
+                <div class="icon-container-for-genre">
+                    <img src="2858715b-d09c-4eed-9a78-4909cfc41061.svg" alt="Strategy Icon">
+                </div>
+                <div class="xbox-nav-label">Strategy  <i
+                    class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="image-container-for-game-home">
+        <section class="game-pass">
+            <h1>GAME PASS</h1>
+            <div class="underline"></div>
+            <p>Play hundreds of games on console, PC, cloud.</p>
+            <div class="xbox-nav-label" style="text-align: center;">JOIN NOW  <i
+                class="fas fa-chevron-right"></i></div>
+            <div class="game-buttons">
+                <button class=" sharuf">Console games</button>
+                <button class="sharuf">PC games</button>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <div class="carousel-wrapper3  carousel-wrapper-for-game-pass-ultimate-banner3"
+    style="background-color: #e6e6e6 !important; ">
+
+    <div class="hamnawa">
+        <center>
+            <div class="unstopable">
+                <h2 class="shape3">Last Chance Sale</h2>
+                <p class="shape4">Save up to 60%
+
+
+
+                </p>
+            </div>
+
+            <div class="zamana">
+
+                <a href="#" target="_blank" class="mink-reservar you">LEARN MORE <i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </center>
+
+    </div>
+    <button class="button left3" onclick="scrollCarousel3(-1)">&#10094;</button>
+    <center>
+        <div class="carousel-container3" id="carousel3">
+
+
+
+            <div class="carousel-item3">
+                <img src="masoom (5).jpeg"
+                    alt="Overthrown">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Overthrown (Game Preview)</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item3">
+                <img src="masoom (6).jpeg"
+                    alt="EA Sports WRC">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>EA SPORTS™ WRC</h3>
+                    <p>Racing & Flying</p>
+                </div>
+            </div>
+            <div class="carousel-item3">
+                <img src="mera (7).jpg"
+                    alt="Crash Nitro Fueled">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Crash™ Team Racing Nitro-Fueled</h3>
+                    <p>Racing & Flying</p>
+                </div>
+            </div>
+            <div class="carousel-item3">
+                <img src="masoom (8).jpeg"
+                    alt="Aliens Dark Descent">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Aliens: Dark Descent</h3>
+                    <p>Strategy</p>
+                </div>
+            </div>
+            <div class="carousel-item3">
+                <img src="masoom (9).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+            <div class="carousel-item3">
+                <img src="masoom (13).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item3">
+                <img src="masoom (16).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="carousel-item3">
+                <img src="masoom (11).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item3">
+                <img src="masoom (10).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item3">
+                <img src="masoom (1).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content3">
+                    <button class="raahon3">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </center>
+    <button class="button right3" onclick="scrollCarousel3(1)">&#10095;</button>
+</div>
+
+<div class="carousel-wrapper  carousel-wrapper-for-game-pass-ultimate-banner"
+style="background-color: transparent ;">
+
+
+<div class="hamnawa">
+    <center>
+        <div class="unstopable">
+            <h2 class="shape3">Last Chance Sale</h2>
+            <p class="shape4">Save up to 60%
+
+
+
+            </p>
+        </div>
+
+        <div class="zamana">
+
+            <a href="#" target="_blank" class="mink-reservar you">LEARN MORE <i
+                    class="fas fa-chevron-right"></i></a>
+        </div>
+
+    </center>
+
+</div>
+<button class="button left" onclick="scrollCarousel(-1)">&#10094;</button>
+<center>
+    <div class="carousel-container" id="carousel">
+
+
+
+        <div class="carousel-item">
+            <img src="masoom (1).jpeg"
+                alt="Overthrown">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Overthrown (Game Preview)</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <img src="masoom (10).jpeg"
+                alt="EA Sports WRC">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>EA SPORTS™ WRC</h3>
+                <p>Racing & Flying</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="masoom (11).jpeg"
+                alt="Crash Nitro Fueled">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Crash™ Team Racing Nitro-Fueled</h3>
+                <p>Racing & Flying</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="masoom (12).jpeg"
+                alt="Aliens Dark Descent">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Aliens: Dark Descent</h3>
+                <p>Strategy</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="masoom (13).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="masoom (14).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <img src="masoom (15).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="carousel-item">
+            <img src="masoom (16).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <img src="masoom (17).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <img src="masoom (18).jpeg"
+                alt="Nine Sols">
+            <div class="carousel-item-content">
+                <button class="raahon">50% OFF</button>
+
+                <h3>Nine Sols</h3>
+                <p>Action & Adventure</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</center>
+<button class="button right" onclick="scrollCarousel(1)">&#10095;</button>
+</div>
+
+
+<div class="carousel-wrapper5  carousel-wrapper-for-game-pass-ultimate-banner5"
+    style="background-color: #e6e6e6 !important; ">
+    <div class="hamnawa">
+        <center>
+            <div class="unstopable">
+                <h2 class="shape3">Last Chance Sale</h2>
+                <p class="shape4">Save up to 60%
+
+
+
+                </p>
+            </div>
+
+            <div class="zamana">
+
+                <a href="#" target="_blank" class="mink-reservar you">LEARN MORE <i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </center>
+
+    </div>
+
+    <button class="button left5" onclick="scrollCarousel5(-1)">&#10094;</button>
+    <center>
+        <div class="carousel-container5" id="carousel5">
+
+
+
+            <div class="carousel-item5">
+                <img src="muthi (18).jpeg"
+                    alt="Overthrown">
+                <div class="carousel-item-content5">
+                    <button class="raahon5">50% OFF</button>
+
+                    <h3>Overthrown (Game Preview)</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item5">
+                <img src="muthi (19).jpeg"
+                    alt="EA Sports WRC">
+                <div class="carousel-item-content5">
+                    <button class="raahon5">50% OFF</button>
+
+                    <h3>EA SPORTS™ WRC</h3>
+                    <p>Racing & Flying</p>
+                </div>
+            </div>
+            <div class="carousel-item4">
+                <img src="muthi (11).jpeg"
+                    alt="Aliens Dark Descent">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Aliens: Dark Descent</h3>
+                    <p>Strategy</p>
+                </div>
+            </div>
+            <div class="carousel-item4">
+                <img src="muthi (12).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+            <div class="carousel-item4">
+                <img src="muthi (13).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item4">
+                <img src="muthi (14).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="carousel-item4">
+                <img src="muthi (15).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content4">
+                    <button class="raahon4">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="carousel-item5">
+                <img src="muthi (3).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content5">
+                    <button class="raahon5">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item5">
+                <img src="muthi (20).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content5">
+                    <button class="raahon5">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item5">
+                <img src="muthi (2).jpeg"
+                    alt="Nine Sols">
+                <div class="carousel-item-content5">
+                    <button class="raahon5">50% OFF</button>
+
+                    <h3>Nine Sols</h3>
+                    <p>Action & Adventure</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </center>
+    <button class="button right5" onclick="scrollCarousel5(1)">&#10095;</button>
+</div>
+
+<div class="video-container-for-games-home">
+    <div class="video-container">
+        <video id="bg-video" src="a7b18064-0409-498c-aba3-c0830fca7731.mp4" autoplay muted></video>
+        <button id="video-control" class="control-button"><i class="fa-solid fa-pause"></i></button>
+    </div>
+    
+    <div class="video-overlay">
+        <img class="game-pass-logo" src="6396339a-e2e4-4b9d-bd25-4f0ef6ef3eb0.png" alt="GAME PASS">
+        <p class="overlay-text">Play hundreds of console and PC games, plus get online multiplayer and EA Play.</p>
+        <div class="overlay-buttons">
+            <a href="#" class="overlay-button">JOIN NOW ></a>
+            <a href="#" class="overlay-button">EXPLORE GAME PASS LIBRARY ></a>
+        </div>
+    </div>
+</div>
+
+<div class="features-container-for-games-home">
+    <div class="feature-for-games-home">
+        <img src="dccd44ce-7452-41f7-ad56-4a4abbdac8f7.jpg" alt="Optimized for Xbox Series X|S">
+        <div class="feature-content-for-games-home">
+            <h2 class="feature-title-for-games-home" style="color: black;">Optimized for Xbox Series X|S</h2>
+            <p class="feature-description-for-games-home" style="color: black;">Games featuring the Optimized for Xbox Series X|S icon
+                will showcase unparalleled load-times, heightened visuals, and steadier framerates at up to 120FPS.
+            </p>
+            <div class="xbox-nav-label">SEE ALL OPTIMIZED GAMES  <i
+                class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+    <div class="feature-for-games-home">
+        <img src="0232e424-c004-426c-9ca0-ebb47ac60274.jpg" alt="Backward compatible games">
+        <div class="feature-content-for-games-home">
+            <h2 class="feature-title-for-games-home" style="color: black;">Backward compatible games</h2>
+            <p class="feature-description-for-games-home" >Experience four generations of gaming on Xbox with
+                backward compatibility. Play your Xbox One library, plus fan-favorite Xbox 360 and Original Xbox
+                games on Xbox Series X|S.</p>
+                <div class="xbox-nav-label">SEE ALL  <i
+                    class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+    <section class="pic-section">
+        <div class="pic-container">
+            <img src="tereliye (1).svg" alt="Image" class="section-image2">
+        </div>
+        <div class="text-contain">
+            <h2 class="section-heading2">
+                Receive an Xbox gift card? Redeem your code to apply on digital games.</h2>
+
+        </div>
+        <div class="buttons-container2">
+            <a href="#" target="_blank" class="dink-reservar" style="color: #054B16;">SEE ALL DEALS<i class="fas fa-chevron-right"></i></a>
+         
+        </div>
+
+    </section>
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+<div class="xbox-navigation-container">
+    <a href="" class="xbox-nav-item">
+        <div class="xbox-support-image3">
+
+        </div>
+
+        <div class="xbox-nav-label">CONSOLES  <i
+            class="fas fa-chevron-right"></i></div>
+    </a>
+
+    <a href="" class="xbox-nav-item">
+        <div class="xbox-support-image2">
+
+        </div>
+
+        <div class="xbox-nav-label">ACCESSORIES <i
+            class="fas fa-chevron-right"></i></div>
+
+    </a>
+    <a href="" class="xbox-nav-item">
+        <div class="xbox-support-image1">
+
+        </div>
+        <div class="xbox-nav-label">XBOX APP  <i
+            class="fas fa-chevron-right"></i></div>
+    </a>
+    <a href="" class="xbox-nav-item">
+        <div class="xbox-support-image">
+
+        </div>
+        <div class="xbox-nav-label">SUPPORT <i
+            class="fas fa-chevron-right"></i></div>
+    </a>
+</div>
+
+
+
+<div class="follow " style="padding:30px;color:#000;">
+    <span>Follow Xbox</span>
+    <i class="far fa-envelope"></i>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-tiktok"></i>
+    <i class="fab fa-youtube"></i>
+</div>
+
+<footer class="footer">
+    <div class="footer-sections">
+        <div class="footer-column">
+            <h3>Browse</h3>
+            <ul>
+                <li><a href="#">Xbox consoles</a></li>
+                <li><a href="#">Xbox games</a></li>
+                <li><a href="#">Xbox Game Pass</a></li>
+                <li><a href="#">Xbox accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Xbox News</a></li>
+                <li><a href="#">Xbox Support</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Community Standards</a></li>
+                <li><a href="#">Photosensitive Seizure Warning</a></li>
+                <li><a href="#">User Research at Xbox</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Microsoft Store</h3>
+            <ul>
+                <li><a href="#">Microsoft account</a></li>
+                <li><a href="#">Microsoft Store Support</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order tracking</a></li>
+                <li><a href="#">Store locations</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Rewards</h3>
+            <ul>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Xbox Mastercard</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>For Developers</h3>
+            <ul>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Designed for Xbox</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <a href="#">English (United States)</a>
+            <div class="privacy-toggle">
+                <input type="checkbox" id="privacy" />
+                <label for="privacy"></label>
+            </div>
+            <a href="#">Your Privacy Choices</a>
+            <a href="#">Consumer Health Privacy</a>
+        </div>
+        <div class="footer-bottom-right">
+            <a href="#">Sitemap</a>
+            <a href="#">Contact Microsoft</a>
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Trademarks</a>
+            <a href="#">Third Party Notices</a>
+            <a href="#">Safety & eco</a>
+            <a href="#">About our ads</a>
+            <span>© Microsoft 2024</span>
+        </div>
+    </div>
+</footer>
+
+
+<script defer>
+    document.querySelector('.menu-btn').addEventListener('click', () => {
+        document.querySelector('.menu-links').classList.toggle('show');
+        document.querySelector('#menu-icon').classList.toggle('fa-times');
+    });
+</script>
+<script>
+const video = document.getElementById('bg-video');
+const controlButton = document.getElementById('video-control');
+const icon = controlButton.querySelector('i');
+
+controlButton.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        icon.className = 'fa-solid fa-pause'; // Pause icon
+    } else {
+        video.pause();
+        icon.className = 'fa-solid fa-play'; // Resume icon
+    }
+});
+
+    
+    // Page Load Animation
+    window.addEventListener('load', function () {
+        document.querySelectorAll('.grid-items').forEach(item => item.classList.add('visible'));
+    });
+
+    // Slider Functionality
+    const slider = document.getElementById('slider');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    const pagination = document.getElementById('pagination');
+    let currentIndex = 0;
+    const totalSlides = slider?.children?.length || 0;
+
+    if (slider && pagination) {
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('data-index', i);
+            pagination.appendChild(dot);
+        }
+
+        const updateSlider = () => {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelectorAll('.dot').forEach((dot, index) =>
+                dot.classList.toggle('active', index === currentIndex)
+            );
+        };
+
+        nextBtn?.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        prevBtn?.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        pagination?.addEventListener('click', (e) => {
+            if (e.target.classList.contains('dot')) {
+                currentIndex = parseInt(e.target.getAttribute('data-index'), 10);
+                updateSlider();
+            }
+        });
+    }
+
+    // Carousel Scrolling
+    const setupCarousel = (carouselId, wrapperClass, itemClass, gap = 20) => {
+        const carousel = document.getElementById(carouselId);
+        const wrapper = document.querySelector(wrapperClass);
+        let itemWidth = 0;
+
+        const updateItemWidth = () => {
+            itemWidth = carousel.querySelector(itemClass)?.offsetWidth + gap || 0;
+        };
+
+        const scrollCarousel = (direction) => {
+            updateItemWidth();
+            const visibleItems = Math.floor(wrapper.offsetWidth / itemWidth);
+            const scrollAmount = direction * itemWidth * visibleItems;
+            carousel.scrollLeft += scrollAmount;
+        };
+
+        window.addEventListener('resize', updateItemWidth);
+        return scrollCarousel;
+    };
+
+    const scrollCarousel1 = setupCarousel('carousel', '.carousel-wrapper', '.carousel-item');
+    const scrollCarousel2 = setupCarousel('carousel2', '.carousel-wrapper2', '.carousel-item2');
+    const scrollCarousel3 = setupCarousel('carousel3', '.carousel-wrapper3', '.carousel-item3');
+    const scrollCarousel4 = setupCarousel('carousel4', '.carousel-wrapper4', '.carousel-item4');
+    const scrollCarousel5 = setupCarousel('carousel5', '.carousel-wrapper5', '.carousel-item5');
+
+
+    // Navigation Dropdowns
+    document.addEventListener('DOMContentLoaded', () => {
+        const navItems = document.querySelectorAll('.new-nav-item');
+
+        navItems.forEach(navItem => {
+            const dropdown = navItem.querySelector('.bold-dropdown');
+
+            navItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => dd !== dropdown && dd.classList.remove('active'));
+                dropdown?.classList.toggle('active');
+            });
+
+            navItem.addEventListener('mouseenter', () => dropdown?.classList.add('hovering'));
+            navItem.addEventListener('mouseleave', () => dropdown?.classList.remove('hovering'));
+        });
+
+        document.querySelectorAll('.nested-dropdown-trigger').forEach(trigger => {
+            const nestedDropdown = trigger.nextElementSibling;
+
+            trigger.addEventListener('click', (event) => {
+                event.stopPropagation();
+                trigger.closest('.bold-dropdown').querySelectorAll('.nested-dropdown').forEach(nd => nd !== nestedDropdown && nd.classList.remove('active'));
+                nestedDropdown?.classList.toggle('active');
+            });
+
+            trigger.addEventListener('mouseenter', () => nestedDropdown?.classList.add('hovering'));
+            trigger.addEventListener('mouseleave', () => nestedDropdown?.classList.remove('hovering'));
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.new-nav-item')) {
+                document.querySelectorAll('.bold-dropdown, .nested-dropdown').forEach(dd => dd.classList.remove('active'));
+            }
+        });
+    });
+</script>
+
+
+<script src="assets/global-shares/script/js/storepurch.js"></script>
+<script src="assets/global-shares/templates/JS/page-bar-dropdown.js"></script>
+<script src="assets/global-shares/templates/JS/xbox-MWF-2021.js"></script>
+<script src="assets/JS/dayOneContent.js"></script>
+<script src="assets/JS/dayOnePop.js"></script>
+<script src="assets/JS/globalContent-NEW.js"></script>
+<script src="assets/JS/xgp-categories.js"></script>
+<script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+</body>
+
+</html>

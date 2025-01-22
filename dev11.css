@@ -1,0 +1,732 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000 !important;
+  overflow-x: hidden !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.yousuf-banner {
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center; /* Background ko center align karta hai */
+  background-repeat: no-repeat;
+  height: 110vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yousuf-banner {
+    background-image: url('https://assets.xboxservices.com/assets/16/b7/16b79de5-a47e-46d4-be8e-5c181bb25a71.jpg?n=Optimized-For-2023_Super-Hero-0_September-2024_767x431.jpg'); /* Mobile specific image */
+    background-size: contain; /* Image ke aspect ratio ko maintain karega */
+    background-position: center;
+    height: auto; /* Height ko auto adjust karenge */
+    padding-top: 56.25%; /* Aspect ratio maintain karne ke liye padding */
+  }
+  .yousuf-logo-img {
+    display: none;
+  }
+  .yousuf-container .yousuf-heading-container {
+    margin-top: 80px !important;
+  }
+}
+@media (max-width: 330px) {
+  .yousuf-heading {
+    font-size: 45px !important;
+  }
+}
+
+.yousuf-img-box {
+  height: 30%;
+  max-width: 100%;
+}
+
+.yousuf-logo-img {
+  max-width: 100%; /* Image ko responsive banane ke liye */
+  height: auto;
+}
+.yousuf-heading {
+  padding: 6px 0 6px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-family: SegoeProBlack, "Segoe UI", SegoeUI, Helvetica, Arial,  sans-serif;
+  color: white;
+  text-align: center;
+}
+@media screen and (min-width: 0px) {
+  .yousuf-heading {
+    font-size: 55px;
+    line-height: 46px;
+  }
+}
+.yousuf-container .yousuf-heading-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+}
+.yousuf-heading-underline {
+  position: relative; /* For pseudo-elements */
+  height: 10px; /* Thin underline */
+  width: 60px;
+  background-color: #9bf00b; /* Main underline color */
+  margin: auto;
+  transform: skewX(-35deg); /* Skew effect */
+  margin-top: 10px;
+}
+/* .yousuf-content-container{
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+} */
+.yousuf-text {
+  color: white;
+  padding: 4px 200px;
+  font-weight: 600;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+     sans-seri;
+  font-size: 24px;
+  text-align: center;
+  line-height: 28px;
+}
+
+@media (max-width: 767px) {
+  .yousuf-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .yousuf-text {
+    padding: 8px 0 4px;
+  }
+}
+.yousuf-heading-2 {
+  color: white;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* image gallery */
+.gallery-container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.preview-box {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.preview-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -90px;
+  gap: 10px;
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .thumbnails {
+    max-width: 100%;
+  }
+  .thumbnails .thumbnail {
+    width: 5px !important;
+    height: 150px;
+  }
+}
+
+@media (max-width: 666px) {
+    .thumbnails .thumbnail {
+      max-width: 100px !important; /* 5 images per row with each taking up 18% width */
+      height: 150px;
+      object-fit: cover; /* Ensures the image is contained properly without distortion */
+    }
+  }
+  
+@media (max-width: 400px) {
+  .thumbnail {
+    flex: 1 1 90%; /* 1 image per row for very small screens */
+  }
+}
+.thumbnail {
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, filter 0.3s;
+  z-index: 2;
+  filter: grayscale(50%) brightness(50%); /* Default dark overlay */
+  flex: 1 1 18%;
+}
+
+.thumbnail:hover {
+  border-color: #9bf00b;
+  filter: grayscale(30%) brightness(70%); /* Slightly lighten on hover */
+}
+
+.thumbnail.active {
+  border-color: yellow;
+  filter: grayscale(0) brightness(100%); /* Remove overlay for active thumbnail */
+}
+
+/* Target thumbnails that are not active */
+.thumbnail:not(.active) {
+  filter: grayscale(50%) brightness(50%);
+}
+
+#image-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: white;
+}
+.thumbnail-text {
+    text-align: center;
+    font-size: 18px;
+    color: white !important;
+    margin-top: 20px;
+    display: none; /* By default, hide all text */
+  }
+  
+  .thumbnail-text h3 {
+    font-weight: 700;
+    color: white !important;
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    font-size: 34px;
+    line-height: 40px;
+  }
+  
+  .thumbnail-text p {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    font-weight: 400;
+    line-height: 23px;
+    font-size: 15px;
+    text-align: center;
+    padding: 2px 50px;
+  }
+  
+  /* Responsive for screens 666px and below */
+  @media (max-width: 666px) {
+    .thumbnail-text h3 {
+      font-size: 24px; /* Reduced font size for h3 */
+      line-height: 28px;
+    }
+  
+    .thumbnail-text p {
+      font-size: 12px; /* Smaller font size for paragraph */
+      padding: 2px 20px; /* Less padding for smaller screens */
+    }
+  }
+  
+  /* Responsive for screens 480px and below */
+  @media (max-width: 480px) {
+    .thumbnail-text h3 {
+      font-size: 20px; /* Further reduced size for very small screens */
+      line-height: 24px;
+    }
+  
+    .thumbnail-text p {
+      font-size: 10px; /* Even smaller font size for paragraph */
+      padding: 2px 10px; /* Even less padding */
+    }
+  }
+  
+
+/* Active text alignment for better UX */
+.thumbnail.active + .thumbnail-text {
+  display: block;
+  color: white !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .preview-box {
+    max-width: 400px;
+  }
+
+  .nav-btn {
+    font-size: 16px;
+    padding: 8px;
+  }
+  #image-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-box {
+    max-width: 300px;
+  }
+  #image-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .preview-box {
+    max-width: 250px;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 6px;
+  }
+  #image-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 200px) {
+  .preview-box {
+    max-width: 180px;
+  }
+  #image-text {
+    font-size: 10px;
+  }
+}
+.yousuf-slider-container .yousuf-heading-h2 {
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+}
+
+.yousuf-slider-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.yousuf-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.yousuf-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.yousuf-slide {
+  flex: 0 0 calc(25% - 20px); /* 4 images visible at once */
+  margin: 5px;
+  text-align: left;
+  position: relative; /* Important to position child elements inside it */
+}
+.yousuf-slide img {
+  width: 90%;
+  height: 70%;
+  display: block;
+  position: relative;
+  z-index: 1; /* Ensure the image stays behind the gradient */
+}
+.yousuf-slider-text-container {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 100;
+  padding: 32px 27px 50px 30px;
+  white-space: normal;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 32px,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.yousuf-slider-container .yousuf-slide .yousuf-slider-text {
+  color: white;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  z-index: 2; /* Keep text on top of the gradient */
+}
+
+.yousuf-slider-container .yousuf-slide .yousuf-slider-text-2 {
+  color: white;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  z-index: 2; /* Keep text on top of the gradient */
+}
+
+.yousuf-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.yousuf-prev-btn {
+  left: 10px;
+}
+
+.yousuf-next-btn {
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yousuf-slide {
+    flex: 0 0 calc(50% - 10px); /* 2 images visible on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .yousuf-slide {
+    flex: 0 0 100%; /* 1 image visible on very small screens */
+  }
+}
+.yousuf-grid-system .yousuf-heading-h3{
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: white;
+    text-align: center;
+    line-height: 56px;
+}
+
+/* Grid container for 4 equal boxes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 5px; /* Space between boxes */
+    width: 80%; /* Full width */
+    margin: 0 auto; /* Center alignment */
+    overflow: hidden;
+  }
+  
+  /* Styling for individual boxes */
+  .grid-box {
+    background-color: #171717; /* Box background color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 60px 60px; /* Internal spacing */
+    font-size: 18px;
+  }
+  
+  /* Responsive design for tablets (768px and below) */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+  
+  /* Responsive design for mobile (480px and below) */
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Single column */
+    }
+  }
+  .yousuf-grid-image{
+    width: 100;
+  }
+
+  /* Banner section styling */
+.yousuf-banner-section {
+    /* padding: 30px; Add spacing around the section */
+    color: white; /* Text color */
+  }
+  
+  /* Row styling */
+  .yousuf-banner-section  .yousuf-row .yousuf-col{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  /* Column for image */
+  .yousuf-banner-section .yousuf-row .yousuf-col .yousuf-banner-img {
+    height: 80; /* Maintain aspect ratio */
+    /* display: block; Remove any inline gap */
+    padding-left:70px ;
+    width: 55%;
+  }
+  .yousuf-banner-section .yousuf-row .yousuf-col .yousuf-banner-text-container{
+    background-color: #232323;
+    margin: auto 0;
+    height: 40%;
+    width: 100%;
+    padding: 60px 20px;
+  }
+  /* Column styling for text */
+  .yousuf-col h3 {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 40px;
+    color: #ffffff; /* Heading color */
+    max-width:60% ;
+  }
+  
+  .yousuf-col p {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #ffffff; /* Light gray text for better readability */
+    max-width:80% ;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .yousuf-row {
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center; /* Center-align text for mobile */
+    }
+  
+    .yousuf-col img .yousuf-banner-img {
+      margin-bottom: 20px; /* Add space between image and text */
+    }
+  }
+  /* Row styling */
+  .yousuf-banner-section  .yousuf-row-2 .yousuf-col-2{
+    display: inline-flex;
+    
+  }
+  
+  /* Column for image */
+  .yousuf-banner-section .yousuf-row-2 .yousuf-col-2 .yousuf-banner-img-2 {
+    height: 80; /* Maintain aspect ratio */
+    /* display: block; Remove any inline gap */
+    padding-right:70px ;
+    width: 55%;
+  }
+  .yousuf-banner-section .yousuf-row-2 .yousuf-col-2 .yousuf-banner-text-container-2{
+    background-color: #232323;
+    margin: auto 0;
+    height: 40%;
+    width: 100%;
+    padding: 60px 20px;
+    text-align: left;
+  }
+  /* Column styling for text */
+  .yousuf-col-2 h3 {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 40px;
+    color: #ffffff; /* Heading color */
+  }
+  
+  .yousuf-col-2 p {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #ffffff; /* Light gray text for better readability */
+    margin-left:auto;
+  }
+  
+ /* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .yousuf-banner-section .yousuf-row .yousuf-col,
+  .yousuf-banner-section .yousuf-row-2 .yousuf-col-2 {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text for mobile */
+    overflow: hidden; /* Prevent text from overflowing */
+  }
+
+  .yousuf-banner-section .yousuf-row .yousuf-col .yousuf-banner-text-container,
+  .yousuf-banner-section .yousuf-row-2 .yousuf-col-2 .yousuf-banner-text-container-2 {
+    background-color: black;
+    margin: auto 0;
+    height: auto; /* Set height to auto for flexible content */
+    width: 100%;
+    text-align: center;
+    padding: 20px; /* Add padding around text */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    order: 2;
+  }
+
+  .yousuf-col h3,
+  .yousuf-col-2 h3 {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px; /* Adjusted font size */
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 35px;
+    color: #ffffff;
+    max-width: 100%;
+    word-wrap: break-word; /* Break long words to prevent overflow */
+  }
+
+  .yousuf-col p,
+  .yousuf-col-2 p {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #ffffff;
+    max-width: 100%;
+    word-wrap: break-word; /* Break long words to prevent overflow */
+  }
+
+  .yousuf-banner-section .yousuf-row .yousuf-col .yousuf-banner-img,
+  .yousuf-banner-section .yousuf-row-2 .yousuf-col-2 .yousuf-banner-img-2 {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto; /* Ensure images resize properly */
+    order: 1;
+  }
+
+  .yousuf-col-2 img.yousuf-banner-img-2 {
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+}
+.yousuf-footer-heading {
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.yousuf-footer-container .yousuf-row-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Responsive ke liye wrap karenge */
+}
+
+.yousuf-footer-container {
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.yousuf-footer-container .yousuf-footer-text {
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  padding: 0 20px; /* Smaller screens ke liye padding adjust */
+}
+
+.yousuf-footer-container .yousuf-text-footer-small {
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  padding: 0 10px; /* Small screens ke liye adjust */
+  font-style: italic;
+}
+
+.yousuf-row-5 .yousuf-col-5 img {
+  max-width: 100%; /* Images responsive banane ke liye */
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yousuf-footer-heading {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .yousuf-footer-container .yousuf-footer-text {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 10px;
+  }
+
+  .yousuf-footer-container .yousuf-text-footer-small {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .yousuf-footer-heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .yousuf-footer-container .yousuf-footer-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .yousuf-footer-container .yousuf-text-footer-small {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
